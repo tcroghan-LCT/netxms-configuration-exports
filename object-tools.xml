@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+	<formatVersion>4</formatVersion>
+	<server>
+		<version>4.3.3</version>
+		<buildTag>4.3-416-g5911d890b4</buildTag>
+		<operatingSystem>Linux 4.15.0-206-generic</operatingSystem>
+	</server>
+	<description>Object Tools which provide Unimus &lt;-&gt; NetXMS integration</description>
+	<events>
+	</events>
+	<templates>
+	</templates>
+	<traps>
+	</traps>
+	<rules>
+	</rules>
+	<scripts>
+	</scripts>
+	<objectTools>
+		<objectTool id="10006">
+			<name>&amp;Unimus-&gt;Run &amp;Discovery</name>
+			<guid>06b85c14-6ecb-4d7e-8bba-888c6abba7c6</guid>
+			<type>8</type>
+			<data>Unimus::runDiscovery</data>
+			<description>Runs a Unimus discovery on this device</description>
+			<flags>10</flags>
+			<filter>&lt;objectMenuFilter&gt;&#x0A;   &lt;toolOS&gt;&lt;/toolOS&gt;&#x0A;   &lt;toolWorkstationOS&gt;&lt;/toolWorkstationOS&gt;&#x0A;   &lt;toolTemplate&gt;&lt;/toolTemplate&gt;&#x0A;   &lt;toolCustomAttributes&gt;&lt;/toolCustomAttributes&gt;&#x0A;   &lt;snmpOid&gt;&lt;/snmpOid&gt;&#x0A;   &lt;flags&gt;0&lt;/flags&gt;&#x0A;&lt;/objectMenuFilter&gt;</filter>
+			<confirmation></confirmation>
+			<commandName>Unimus discovery</commandName>
+			<commandShortName></commandShortName>
+			<image></image>
+			<remotePort>0</remotePort>
+		</objectTool>
+		<objectTool id="10007">
+			<name>&amp;Unimus-&gt;Run &amp;Backup</name>
+			<guid>fc84b2df-c837-4511-8dd2-5478c6884514</guid>
+			<type>8</type>
+			<data>Unimus::runBackup</data>
+			<description>Runs a Unimus backup on this device</description>
+			<flags>10</flags>
+			<filter>&lt;objectMenuFilter&gt;&#x0A;   &lt;toolOS&gt;&lt;/toolOS&gt;&#x0A;   &lt;toolWorkstationOS&gt;&lt;/toolWorkstationOS&gt;&#x0A;   &lt;toolTemplate&gt;&lt;/toolTemplate&gt;&#x0A;   &lt;toolCustomAttributes&gt;&lt;/toolCustomAttributes&gt;&#x0A;   &lt;snmpOid&gt;&lt;/snmpOid&gt;&#x0A;   &lt;flags&gt;0&lt;/flags&gt;&#x0A;&lt;/objectMenuFilter&gt;</filter>
+			<confirmation></confirmation>
+			<commandName>Unimus backup</commandName>
+			<commandShortName></commandShortName>
+			<image></image>
+			<remotePort>0</remotePort>
+		</objectTool>
+	</objectTools>
+	<dciSummaryTables>
+	</dciSummaryTables>
+	<actions>
+	</actions>
+	<webServiceDefinitions>
+	</webServiceDefinitions>
+</configuration>

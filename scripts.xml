@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+	<formatVersion>4</formatVersion>
+	<server>
+		<version>4.3.3</version>
+		<buildTag>4.3-416-g5911d890b4</buildTag>
+		<operatingSystem>Linux 4.15.0-206-generic</operatingSystem>
+	</server>
+	<description>Scripts which provide Unimus &lt;-&gt; NetXMS integration</description>
+	<events>
+	</events>
+	<templates>
+	</templates>
+	<traps>
+	</traps>
+	<rules>
+	</rules>
+	<scripts>
+		<script id="10038">
+			<guid>1aaa4753-9f59-4ca9-b926-e8b1695a85e8</guid>
+			<name>Unimus::getApiToken</name>
+			<code>return &quot;yourUnimusApiTokenHere&quot;;</code>
+		</script>
+		<script id="10039">
+			<guid>2aa50efa-ae02-474f-a08e-c1a1e6d8cc18</guid>
+			<name>Unimus::getServerAddress</name>
+			<code>return &quot;https://your.unimus.server&quot;;</code>
+		</script>
+		<script id="10040">
+			<guid>1d37d490-67cb-4c26-9cc1-3337c0eb6fbc</guid>
+			<name>Unimus::runDiscovery</name>
+			<code>println(&quot;Running Unimus Discovery on &quot; . $node-&gt;ipAddr . &quot;...&quot;);&#x0A;result = $node-&gt;readWebServiceParameter(&quot;Unimus-job-discover-device:/&quot;);&#x0A;println(&quot;Done.&quot;);&#x0A;return result;</code>
+		</script>
+		<script id="10041">
+			<guid>cd6411e0-ce16-43f5-93e3-78fe7b19ba37</guid>
+			<name>Unimus::runBackup</name>
+			<code>println(&quot;Running Unimus Backup on &quot; . $node-&gt;ipAddr . &quot;...&quot;);&#x0A;result = $node-&gt;readWebServiceParameter(&quot;Unimus-job-backup-device:/&quot;);&#x0A;println(&quot;Done.&quot;);&#x0A;return result;</code>
+		</script>
+	</scripts>
+	<objectTools>
+	</objectTools>
+	<dciSummaryTables>
+	</dciSummaryTables>
+	<actions>
+	</actions>
+	<webServiceDefinitions>
+	</webServiceDefinitions>
+</configuration>
