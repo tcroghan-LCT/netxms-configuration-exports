@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+	<formatVersion>5</formatVersion>
+	<nxslVersionV5>true</nxslVersionV5>
+	<server>
+		<version>5.0.8</version>
+		<buildTag>5.0-1066-g6c885ac8ec</buildTag>
+		<operatingSystem>Linux 6.8.0-48-generic</operatingSystem>
+	</server>
+	<description></description>
+	<events>
+		<event id="922184">
+			<guid>371fc5b1-6a08-45f9-90ea-9978ed7705e6</guid>
+			<name>Config_Change_Detected</name>
+			<code>922184</code>
+			<description>%n device configuration change occured. </description>
+			<severity>0</severity>
+			<flags>1</flags>
+			<message>A configuration change to %n Node was detected</message>
+			<tags></tags>
+		</event>
+	</events>
+	<templates>
+	</templates>
+	<traps>
+	</traps>
+	<rules>
+		<rule id="53">
+			<guid>5fc00ee3-c0ed-4d7b-9d99-a71e765497e1</guid>
+			<flags>7937</flags>
+			<alarmMessage>%m</alarmMessage>
+			<alarmImpact></alarmImpact>
+			<alarmKey></alarmKey>
+			<rootCauseAnalysisScript></rootCauseAnalysisScript>
+			<alarmSeverity>5</alarmSeverity>
+			<alarmTimeout>0</alarmTimeout>
+			<alarmTimeoutEvent>43</alarmTimeoutEvent>
+			<downtimeTag></downtimeTag>
+			<script></script>
+			<actionScript></actionScript>
+			<comments>Backup device config when change detected</comments>
+			<sources>
+</sources>
+			<sourceExclusions>
+			</sourceExclusions>
+			<events>
+				<event id="922184">
+					<name>Config_Change_Detected</name>
+				</event>
+			</events>
+			<timeFrames>
+			</timeFrames>
+			<actions>
+				<action id="4">
+					<guid>216d1c68-a14e-4a2b-bb65-abf49289e6dc</guid>
+					<timerDelay>10</timerDelay>
+					<timerKey></timerKey>
+					<blockingTimerKey>Node%i_Change_Snooze_Timer</blockingTimerKey>
+					<snoozeTime>10</snoozeTime>
+				</action>
+			</actions>
+			<timerCancellations>
+			</timerCancellations>
+			<pStorageActions>
+			</pStorageActions>
+			<customAttributeActions>
+			</customAttributeActions>
+			<alarmCategories>
+			</alarmCategories>
+		</rule>
+	</rules>
+	<scripts>
+	</scripts>
+	<objectTools>
+	</objectTools>
+	<dciSummaryTables>
+	</dciSummaryTables>
+	<actions>
+		<action id="4">
+			<guid>216d1c68-a14e-4a2b-bb65-abf49289e6dc</guid>
+			<name>Unimus.runBackup</name>
+			<type>5</type>
+			<recipientAddress>Unimus::runBackup</recipientAddress>
+			<emailSubject></emailSubject>
+			<data></data>
+			<channelName></channelName>
+		</action>
+	</actions>
+	<webServiceDefinitions>
+	</webServiceDefinitions>
+	<assetManagementSchema>
+	</assetManagementSchema>
+</configuration>
