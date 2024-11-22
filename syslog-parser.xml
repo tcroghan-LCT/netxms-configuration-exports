@@ -2,7 +2,7 @@
    <macros/>
    <rules>
       <rule name="Mikrotik Change ROSv7" break="true">
-         <match repeatInterval="0" reset="false">by.*\:.*\@.*\/.*[add|set|remove]</match>
+         <match repeatInterval="0" reset="false">by.*\:.*\/.*[add|set|remove]</match>
          <event tag="Syslog_Parser_Mikrotik_ROSv7">Config_Change_Detected</event>
          <description>Mikrotik Change detected</description>
          <agentAction action=""></agentAction>
